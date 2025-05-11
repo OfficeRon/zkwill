@@ -1,0 +1,12 @@
+services:
+  oracle:
+    # See the 'docker' subdirectory in demo-rofl for the content of this image.
+    # Note that we are using the sha256 hash of the image to ensure integrity.
+    image: docker.io/matanfridmanrahim/will-rofl:latest
+    environment:
+      # Address of the oracle contract deployed on Sapphire Testnet.
+      - CONTRACT_ADDRESS=0x0d8cc4b8d15D4c3eF1d70af0071376fb26B5669b
+      # Ticker.
+      - TICKER=ROSEUSDT
+    volumes:
+      - /run/rofl-appd.sock:/run/rofl-appd.sock
